@@ -21,9 +21,12 @@
 
 <button onclick="Function()">Click me</button>
 
-<p id="demo"></p>
+<p id="dem"></p>
 
 
+Enter your name: <input type="text" name="fname" id="fname" onblur="mFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
 
 <script>
 function bigImg(x) {
@@ -41,7 +44,12 @@ function myFunction() {
 }
 
 function Function() {
-  document.getElementById("demo").innerHTML = "Hello";
+  document.getElementById("dem").innerHTML = "Hello";
+}
+
+function mFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
 }
 </script>
 
